@@ -1,0 +1,6 @@
+1. Add new (failing) test
+2. Run your entire test suite and see the new test fail
+3. Write code to satisfy the new test
+4. Run your entire test suite again and see all tests pass
+5. Refactor your code
+6. Repeat
