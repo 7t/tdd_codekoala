@@ -6,6 +6,9 @@ import random
 class Pig:
     def __init__(self, *players):
         self.players = players
+        self.scores = {}
+        for player in self.players:
+            self.scores[player] = 0
 
     def get_players(self):
         '''Returns a tuple of all players'''
@@ -14,3 +17,6 @@ class Pig:
     def roll(self):
         '''Returns a number between 1 and 6'''
         return random.randint(1, 6)
+
+    def get_scores(self):
+        return self.scores
