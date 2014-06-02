@@ -6,9 +6,7 @@ import random
 class Pig:
     def __init__(self, *players):
         self.players = players
-        self.scores = {}
-        for player in self.players:
-            self.scores[player] = 0
+        self.scores = dict.fromkeys(self.players, 0)
 
     def get_players(self):
         '''Returns a tuple of all players'''
@@ -20,3 +18,14 @@ class Pig:
 
     def get_scores(self):
         return self.scores
+
+
+def get_player_names():
+    '''Prompt for player names'''
+    names = []
+    while True:
+        value = input("Player {}'s name: ".format(len(names) + 1))
+        if not value:
+            break
+        names.append(value)
+    return names
